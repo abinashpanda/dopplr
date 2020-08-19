@@ -1,8 +1,8 @@
 # dopplr
 
-Starter kit for any green field project. It comes with
+Codebase for *dopplr*
 
-- [`strapi`](http://strapi.io/) backend
+- `nestjs` backend
 - `mongodb` database
 - `react` frontend with [`antd`](https://ant.design/) and [`tailwindcss`](https://tailwindcss.com/) setup
 
