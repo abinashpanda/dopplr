@@ -1,5 +1,14 @@
 version: "3.8"
 services:
+  database:
+    image: mongo
+    container_name: database
+    environment:
+      MONGO_INITDB_DATABASE: dopplr
+      MONGO_INITDB_ROOT_USERNAME: dopplr
+      MONGO_INITDB_ROOT_PASSWORD: dopplr
+    volumes:
+      - ./data:/data/db
   backend:
     build:
       context: ./backend
@@ -11,6 +20,8 @@ services:
       - "./backend:/srv/server"
     ports:
       - "4000:4000"
+    depends_on:
+      - database
   client:
     stdin_open: true
     build:
