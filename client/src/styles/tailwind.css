@@ -1,0 +1,21 @@
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+
+@tailwind components;
+
+body {
+  font-size: 16px !important;
+  @apply font-sans antialiased;
+}
+
+svg {
+  vertical-align: initial;
+}
+
+.text-num {
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+}
+
+@tailwind utilities;
